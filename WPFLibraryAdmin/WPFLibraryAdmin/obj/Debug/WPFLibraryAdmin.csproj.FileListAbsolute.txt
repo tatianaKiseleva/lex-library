@@ -1,0 +1,52 @@
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\bin\Debug\WPFLibraryAdmin.exe.config
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\bin\Debug\WPFLibraryAdmin.exe
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\bin\Debug\WPFLibraryAdmin.pdb
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.csprojResolveAssemblyReference.cache
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\MainWindow.g.cs
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFSearch.g.cs
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\App.g.cs
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin_MarkupCompile.cache
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin_MarkupCompile.lref
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\MainWindow.baml
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFSearch.baml
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.g.resources
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.Properties.Resources.resources
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.csproj.GenerateResource.Cache
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.exe
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.pdb
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLogIn.g.cs
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLogIn.baml
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFMedia.g.cs
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFMedia.baml
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFnewAuthor.g.cs
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFnewCategory.g.cs
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFnewAuthor.baml
+C:\Users\Andrey Kiselev\Documents\Visual Studio 2015\Projects\LibraryNewWPF\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFnewCategory.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\bin\Debug\WPFLibraryAdmin.exe.config
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.exe
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.pdb
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\bin\Debug\WPFLibraryAdmin.exe
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\bin\Debug\WPFLibraryAdmin.pdb
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.csprojResolveAssemblyReference.cache
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\MainWindow.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLogIn.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFMedia.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFnewCategory.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFSearch.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\App.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin_MarkupCompile.cache
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin_MarkupCompile.lref
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\MainWindow.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLogIn.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFMedia.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFnewCategory.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFSearch.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.g.resources
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.Properties.Resources.resources
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFLibraryAdmin.csproj.GenerateResource.Cache
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\NewAuthor.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\NewAuthor.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\AddAddress.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\AddAddress.baml
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFNewPublisher.g.cs
+C:\GrundCSharp\Tatiana\NY_Bibliotek\WPFLibraryAdmin\WPFLibraryAdmin\obj\Debug\WPFNewPublisher.baml

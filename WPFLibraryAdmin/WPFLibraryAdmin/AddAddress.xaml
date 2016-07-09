@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPFLibraryAdmin.AddAddress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLibraryAdmin"
+        mc:Ignorable="d"
+        Title="AddAddress" Height="267.021" Width="260.638">
+    <Grid Margin="0,0,0,-3">
+        <TextBlock x:Name="tbxAdrline1" HorizontalAlignment="Left" Margin="138,20,0,0" TextWrapping="Wrap" Text="line1" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="lblAdrline1" Content="Address line1" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="123"/>
+        <TextBlock x:Name="tbxAdrline2" HorizontalAlignment="Left" Margin="138,51,0,0" TextWrapping="Wrap" Text="line2" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="lblAdrline2" Content="Address line2" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="123"/>
+        <TextBlock x:Name="tbxPostnumber" HorizontalAlignment="Left" Margin="138,82,0,0" TextWrapping="Wrap" Text="Post Number" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="lblPostnumber" Content="Post Number" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="123"/>
+        <TextBlock x:Name="tbxCity" HorizontalAlignment="Left" Margin="138,113,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Width="123"/>
+        <TextBlock x:Name="tbxCountry" HorizontalAlignment="Left" Margin="138,144,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="lblCountry" Content="Country" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="123"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="138,209,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnCansel" Content="Cansel" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="75" Click="btnCansel_Click"/>
+    </Grid>
+</Window>

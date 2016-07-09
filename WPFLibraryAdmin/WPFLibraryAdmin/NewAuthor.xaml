@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFLibraryAdmin.NewAuthor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLibraryAdmin"
+        mc:Ignorable="d"
+        Title="NewAuthor" Height="305.319" Width="277.66">
+    <Grid>
+        <TextBox x:Name="tbxFirstName" HorizontalAlignment="Left" Height="23" Margin="140,22,0,0" TextWrapping="Wrap" Text="FirstName" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblFirstName" Content="First Name" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="tbxLastName" HorizontalAlignment="Left" Height="23" Margin="140,53,0,0" TextWrapping="Wrap" Text="LastName" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblLastName" Content="Last Name" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="tbxPersonalNumber" HorizontalAlignment="Left" Height="23" Margin="140,84,0,0" TextWrapping="Wrap" Text="Personal Number" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblPersonalNumber" Content="Personal Number" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="tbxEmail" HorizontalAlignment="Left" Height="23" Margin="140,115,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblEmail" Content="Email" HorizontalAlignment="Left" TextBlock.TextAlignment="Right" Margin="10,111,0,0" VerticalAlignment="Top" Width="114"/>
+        <Button x:Name="btnAddAddress" Content="Add Address" HorizontalAlignment="Left" Margin="140,143,0,0" VerticalAlignment="Top" Width="120" Click="btnAddAddress_Click"/>
+        <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" TextBlock.TextAlignment="Right" Margin="10,140,0,0" VerticalAlignment="Top" Width="114"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="140,226,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnCansel" Content="Cansel" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" Width="120" Click="btnCansel_Click"/>
+
+    </Grid>
+</Window>

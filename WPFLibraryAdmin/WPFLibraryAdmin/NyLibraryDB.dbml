@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MyLibrary" Class="NyLibraryDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\mssqllocaldb;Initial Catalog=MyLibrary;Integrated Security=True" SettingsObjectName="WPFLibraryAdmin.Properties.Settings" SettingsPropertyName="MyLibraryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="PersonID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PersonalNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanCardID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Person_MediaAuthor" Member="MediaAuthors" ThisKey="PersonID" OtherKey="PersonID" Type="MediaAuthor" />
+      <Association Name="Person_Loan" Member="Loans" ThisKey="PersonID" OtherKey="PersonID" Type="Loan" />
+      <Association Name="LoanCard_Person" Member="LoanCard" ThisKey="LoanCardID" OtherKey="LoanCardID" Type="LoanCard" IsForeignKey="true" />
+      <Association Name="Address_Person" Member="Address" ThisKey="AddressID" OtherKey="AddressID" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Media" Member="Medias">
+    <Type Name="Media">
+      <Column Name="MediaID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PublisherID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublishingDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ISBN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FormatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LanguageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanPeriod" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Media_MediaAuthor" Member="MediaAuthors" ThisKey="MediaID" OtherKey="MediaID" Type="MediaAuthor" />
+      <Association Name="Media_MediaLibrary" Member="MediaLibraries" ThisKey="MediaID" OtherKey="MediaID" Type="MediaLibrary" />
+      <Association Name="Category_Media" Member="Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="Category" IsForeignKey="true" />
+      <Association Name="Format_Media" Member="Format" ThisKey="FormatID" OtherKey="FormatID" Type="Format" IsForeignKey="true" />
+      <Association Name="Language_Media" Member="Language" ThisKey="LanguageID" OtherKey="LanguageID" Type="Language" IsForeignKey="true" />
+      <Association Name="Publisher_Media" Member="Publisher" ThisKey="PublisherID" OtherKey="PublisherID" Type="Publisher" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaAuthor" Member="MediaAuthors">
+    <Type Name="MediaAuthor">
+      <Column Name="MediaAuthorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MediaID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Media_MediaAuthor" Member="Media" ThisKey="MediaID" OtherKey="MediaID" Type="Media" IsForeignKey="true" />
+      <Association Name="Person_MediaAuthor" Member="Person" ThisKey="PersonID" OtherKey="PersonID" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaLibrary" Member="MediaLibraries">
+    <Type Name="MediaLibrary">
+      <Column Name="MediaLibraryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LibraryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MediaID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MediaLibrary_Loan" Member="Loans" ThisKey="MediaLibraryID" OtherKey="MediaLibraryID" Type="Loan" />
+      <Association Name="Media_MediaLibrary" Member="Media" ThisKey="MediaID" OtherKey="MediaID" Type="Media" IsForeignKey="true" />
+      <Association Name="Library_MediaLibrary" Member="Library" ThisKey="LibraryID" OtherKey="LibraryID" Type="Library" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Category_Media" Member="Medias" ThisKey="CategoryID" OtherKey="CategoryID" Type="Media" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Format" Member="Formats">
+    <Type Name="Format">
+      <Column Name="FormatID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Format_Media" Member="Medias" ThisKey="FormatID" OtherKey="FormatID" Type="Media" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Languages" Member="Languages">
+    <Type Name="Language">
+      <Column Name="LanguageID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Language_Media" Member="Medias" ThisKey="LanguageID" OtherKey="LanguageID" Type="Media" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phone" Member="Phones">
+    <Type Name="Phone">
+      <Column Name="PhoneID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AddressID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PhoneType_Phone" Member="PhoneType" ThisKey="PhoneTypeID" OtherKey="PhonTypeID" Type="PhoneType" IsForeignKey="true" />
+      <Association Name="Address_Phone" Member="Address" ThisKey="AddressID" OtherKey="AddressID" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhoneType" Member="PhoneTypes">
+    <Type Name="PhoneType">
+      <Column Name="PhonTypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PhoneType_Phone" Member="Phones" ThisKey="PhonTypeID" OtherKey="PhoneTypeID" Type="Phone" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Loan" Member="Loans">
+    <Type Name="Loan">
+      <Column Name="LoanID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MediaLibraryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="MediaLibrary_Loan" Member="MediaLibrary" ThisKey="MediaLibraryID" OtherKey="MediaLibraryID" Type="MediaLibrary" IsForeignKey="true" />
+      <Association Name="Person_Loan" Member="Person" ThisKey="PersonID" OtherKey="PersonID" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoanCard" Member="LoanCards">
+    <Type Name="LoanCard">
+      <Column Name="LoanCardID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PIN" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DaisyValidity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="LoanCard_Person" Member="Persons" ThisKey="LoanCardID" OtherKey="LoanCardID" Type="Person" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Library" Member="Libraries">
+    <Type Name="Library">
+      <Column Name="LibraryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Library_MediaLibrary" Member="MediaLibraries" ThisKey="LibraryID" OtherKey="LibraryID" Type="MediaLibrary" />
+      <Association Name="Address_Library" Member="Address" ThisKey="AddressID" OtherKey="AddressID" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Publisher" Member="Publishers">
+    <Type Name="Publisher">
+      <Column Name="PublisherID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddressID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Publisher_Media" Member="Medias" ThisKey="PublisherID" OtherKey="PublisherID" Type="Media" />
+      <Association Name="Address_Publisher" Member="Address" ThisKey="AddressID" OtherKey="AddressID" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Address" Member="Addresses">
+    <Type Name="Address">
+      <Column Name="AddressID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Line1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Line2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PostNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Address_Person" Member="Persons" ThisKey="AddressID" OtherKey="AddressID" Type="Person" />
+      <Association Name="Address_Phone" Member="Phones" ThisKey="AddressID" OtherKey="AddressID" Type="Phone" />
+      <Association Name="Address_Library" Member="Libraries" ThisKey="AddressID" OtherKey="AddressID" Type="Library" />
+      <Association Name="Address_Publisher" Member="Publishers" ThisKey="AddressID" OtherKey="AddressID" Type="Publisher" />
+    </Type>
+  </Table>
+</Database>

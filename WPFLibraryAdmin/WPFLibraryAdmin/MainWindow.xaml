@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFLibraryAdmin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLibraryAdmin"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="199.657" Width="461.254">
+    <Grid Margin="0,0,-8,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="231*"/>
+            <ColumnDefinition Width="230*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnLogOut" Content="Log Out" HorizontalAlignment="Right" Margin="0,20,20,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Height="22" RenderTransformOrigin="0.458,1.007" Click="btnLogOut_Click"/>
+        <Button x:Name="btnNewMedia" Content="Add new media" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Grid.Row="1" Height="22" Click="btnNewMedia_Click" Margin="66,33,65,39"/>
+        <Button x:Name="btnSearchMedia" Content="Search media" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="100" Grid.Row="1" Grid.Column="1" Height="22" Click="btnSeachMedia_Click" Margin="65,33,65,39"/>
+        <Label x:Name="lblHelloUser" Content="Hello!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+    </Grid>
+</Window>
