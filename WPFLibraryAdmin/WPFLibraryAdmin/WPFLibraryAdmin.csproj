@@ -67,11 +67,6 @@
     <Compile Include="AddAddress.xaml.cs">
       <DependentUpon>AddAddress.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyLibraryDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyLibraryDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="NewAuthor.xaml.cs">
       <DependentUpon>NewAuthor.xaml</DependentUpon>
     </Compile>
@@ -79,6 +74,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NyLibraryDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SaveNewMedia.xaml.cs">
+      <DependentUpon>SaveNewMedia.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPFLogIn.xaml.cs">
       <DependentUpon>WPFLogIn.xaml</DependentUpon>
@@ -112,6 +110,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NewAuthor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SaveNewMedia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,17 +152,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="MyLibraryDataSet.xsc">
-      <DependentUpon>MyLibraryDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MyLibraryDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MyLibraryDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MyLibraryDataSet.xss">
-      <DependentUpon>MyLibraryDataSet.xsd</DependentUpon>
-    </None>
     <None Include="NyLibraryDB.dbml.layout">
       <DependentUpon>NyLibraryDB.dbml</DependentUpon>
     </None>

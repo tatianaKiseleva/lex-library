@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using System.Data.Linq;
+using System.Data.Sql;
+using System.Data;
 
 namespace WPFLibraryAdmin
 {
@@ -21,16 +25,15 @@ namespace WPFLibraryAdmin
     {
         NyLibraryDBDataContext DataBase = new NyLibraryDBDataContext();
         public WPFMedia()
+            
         {
             InitializeComponent();
 
             //format
             var format = from SelectFormat in DataBase.Formats
                          select new { SelFormat = SelectFormat.Name, FormatID = SelectFormat.FormatID };
-            this.cbxFormat.ItemsSource = format;
-
+            cbxFormat.ItemsSource = format;
             cbxFormat.DisplayMemberPath = "SelFormat";
-
             cbxFormat.SelectedValuePath = "FormatID";
 
             //publisher
@@ -112,12 +115,90 @@ namespace WPFLibraryAdmin
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            Window ownedWindow = new Window();
-            ownedWindow.Owner = this;
-            ownedWindow.ShowDialog();
-            string Format=cbxFormat.SelectedValue.ToString();
-            string Category=cbxCategory.SelectedValue.ToString();
-            
+            WPFLibraryAdmin.SaveNewMedia addNewMedia = new WPFLibraryAdmin.SaveNewMedia();
+            addNewMedia.ShowInTaskbar = false;
+            addNewMedia.DataContext = this;
+
+            addNewMedia.tbxAddNewMedia.Text = "";
+
+            if (cbxFormat.SelectedItem != null) {
+                object item = cbxFormat.SelectedItem;
+                var cast = CastByExample(item, new { SelFormat = default(string), FormatID = default(int) });
+                addNewMedia.formatName = cast.SelFormat.ToString();
+                addNewMedia.formatIdx = cast.FormatID;
+            }
+
+            if (cbxCategory.SelectedItem != null)
+            {
+                object item = cbxCategory.SelectedItem;
+                var cast = CastByExample(item, new { SelCategory = default(string), CategoryID = default(int) });
+                addNewMedia.catName = cast.SelCategory.ToString();
+                addNewMedia.catIdx = cast.CategoryID;
+
+            }
+
+          //  addNewMedia.tbxAddNewMedia.Text +="Title: "+  tbxTitle.Text + "\r\n";
+
+            if (cbxAuthor.SelectedItem != null)
+            {
+                object item = cbxAuthor.SelectedItem;
+                var val = CastByExample(item, new { SelAutor = default(string), PersonID = default(int) }).SelAutor;
+                //addNewMedia.lblNewMedia.Content += val.ToString() + "&#10;";
+                addNewMedia.tbxAddNewMedia.Text += "Author: "+ val.ToString() + "\r\n";
+            }
+            if (cbxPublisher.SelectedItem != null)
+            {
+                object item = cbxPublisher.SelectedItem;
+                var cast = CastByExample(item, new { SelPublisher = default(string), PublisherID = default(int) });
+                //addNewMedia.lblNewMedia.Content += val.ToString() + "&#10;";
+                addNewMedia.publName=cast.SelPublisher.ToString();
+                addNewMedia.publIdx = cast.PublisherID;
+            }
+
+            //addNewMedia.tbxAddNewMedia.Text += "Year: " + tbxPublisherData.Text + "\r\n";
+            if (tbxTitle.Text != null)
+            {
+                addNewMedia.title = tbxTitle.Text;
+
+            }
+            if (tbxPublisherData.Text != null)
+            {
+                addNewMedia.year= tbxPublisherData.Text;
+
+            }
+            //addNewMedia.tbxAddNewMedia.Text += "ISBN: " + tbxISBN.Text + "\r\n";
+            if (tbxISBN.Text != null)
+            {
+                addNewMedia.isbn = tbxISBN.Text;
+
+            }
+
+            if (cbxLanguage.SelectedItem != null)
+            {
+                object item = cbxLanguage.SelectedItem;
+                var cast = CastByExample(item, new { SelLanguage = default(string), LanguageID = default(int) });
+                addNewMedia.langName = cast.SelLanguage.ToString();
+                addNewMedia.langIdx = cast.LanguageID;
+            }
+            if (cbxLibrary.SelectedItem != null)
+            {
+                object item = cbxLibrary.SelectedItem;
+                var val = CastByExample(item, new { SelLibrary = default(string), LibraryID = default(int) }).SelLibrary;
+                //addNewMedia.lblNewMedia.Content += val.ToString() + "&#10;";
+                addNewMedia.tbxAddNewMedia.Text += "Library: " + val.ToString() + "\r\n";
+            }
+
+            addNewMedia.UpdateLabels();
+            addNewMedia.ShowDialog();
+
+
         }
+
+        public static T CastByExample<T>(object input, T example)
+        {
+            return (T)input;
+        }
+
+
     }
 }
